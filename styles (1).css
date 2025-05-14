@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+body {
+    font-family: 'Press Start 2P', 'VT323', 'Consolas', monospace, Arial, sans-serif;
+    background: #222 url('https://raw.githubusercontent.com/kenneyNL/backgrounds-pack/main/PNG/Preview/backgroundColorForest.png') repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+#game {
+    max-width: 440px;
+    margin: 48px auto;
+    padding: 28px 36px;
+    background: rgba(34, 34, 34, 0.92);
+    border: 4px solid #6b4f1d;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px #000a, 0 0 0 8px #e2c27544;
+    text-align: center;
+    position: relative;
+}
+
+h1, h2, h3 {
+    font-family: 'Press Start 2P', 'VT323', 'Consolas', monospace, Arial, sans-serif;
+    color: #ffe066;
+    text-shadow: 2px 2px 0 #6b4f1d, 0 0 8px #fff2;
+    margin-bottom: 18px;
+}
+
+p, span {
+    font-size: 1.1em;
+    color: #f8f8f8;
+    text-shadow: 1px 1px 0 #222, 0 0 4px #000a;
+}
+
+#player-character {
+    width: 96px;
+    image-rendering: pixelated;
+    display: block;
+    margin: 0 auto 12px;
+}
+
+button {
+    margin: 10px 0;
+    padding: 10px 22px;
+    font-size: 1em;
+    font-family: 'Press Start 2P', 'VT323', 'Consolas', monospace, Arial, sans-serif;
+    border: 3px solid #ffe066;
+    border-radius: 8px;
+    background: 
+        linear-gradient(145deg, #e2c275 60%, #bfa14a 100%),
+        url('https://raw.githubusercontent.com/kenneyNL/platformer-art-deluxe/main/PNG/tiles/grassHalf.png') repeat;
+    background-size: 32px 32px, 32px 32px;
+    color: #222;
+    box-shadow: 0 2px 0 #6b4f1d, 0 4px 12px #000a;
+    cursor: pointer;
+    transition: transform 0.08s, box-shadow 0.08s;
+    outline: none;
+}
+
+button:hover:not(:disabled) {
+    background: 
+        linear-gradient(145deg, #ffe066 60%, #e2c275 100%),
+        url('https://raw.githubusercontent.com/kenneyNL/platformer-art-deluxe/main/PNG/tiles/grassHalf.png') repeat;
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 6px 24px #000c, 0 2px 0 #6b4f1d;
+}
+
+button:active:not(:disabled) {
+    transform: translateY(2px) scale(0.98);
+    box-shadow: 0 1px 0 #6b4f1d;
+}
+
+button:disabled {
+    background: #888a;
+    color: #444;
+    border-color: #aaa;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Fullscreen button in top right */
+#fullscreen-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 10;
+    padding: 8px 18px;
+    font-size: 0.95em;
+}
+
+/* Upgrade and Ability Status */
+#upgrade-cost, #ability-status {
+    margin-left: 10px;
+    font-weight: bold;
+    color: #ffe066;
+    text-shadow: 1px 1px 0 #6b4f1d;
+}
+
+/* Level and Ability Points */
+#level-display, #ap-display {
+    color: #b0e57c;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 8px 0 4px 0;
+    text-shadow: 1px 1px 0 #222, 0 0 4px #000a;
+}
+
+/* Upgrade Shop */
+#upgrade-shop {
+    background: rgba(60, 50, 20, 0.85);
+    border: 2px solid #ffe066;
+    border-radius: 8px;
+    margin: 18px 0 10px 0;
+    padding: 10px 0 8px 0;
+    box-shadow: 0 2px 8px #0004;
+}
+#upgrade-shop h3 {
+    color: #ffe066;
+    margin-bottom: 8px;
+    font-size: 1em;
+}
+#upgrade-shop button {
+    margin: 6px 0;
+    padding: 8px 14px;
+    font-size: 0.95em;
+}
+#upgrade-shop span {
+    color: #b0e57c;
+    font-size: 1em;
+    margin-left: 6px;
+}
+
+/* Boss Section */
+#boss-section {
+    margin-top: 24px;
+    padding: 16px;
+    background: rgba(80, 30, 30, 0.92);
+    border: 3px solid #e74c3c;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 12px #000a;
+}
+#boss-image {
+    display: none;
+    width: 96px;
+    image-rendering: pixelated;
+    margin: 0 auto 12px;
+}
+#boss-health {
+    color: #ffb3b3;
+    font-weight: bold;
+    font-size: 1.15em;
+    text-shadow: 1px 1px 0 #6b4f1d;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 600px) {
+    #game {
+        max-width: 98vw;
+        padding: 12px 2vw;
+    }
+    button {
+        width: 90%;
+        font-size: 0.95em;
+    }
+}

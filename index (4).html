@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Idle Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game">
+        <h1>Idle Game</h1>
+        <button id="fullscreen-btn" onclick="toggleFullscreen()">Go Fullscreen</button>
+        <p id="count-display">Count: 0</p>
+        <p id="increment-value">Click Value: 1</p>
+        <!-- Player Character -->
+        <img id="player-character" src="https://raw.githubusercontent.com/kenneyNL/platformer-art-deluxe/main/PNG/Player/p1_stand.png" alt="Player" style="width:96px;image-rendering:pixelated;display:block;margin:0 auto 12px;">
+        <button onclick="manualIncrement()">Click Me!</button>
+        <br>
+        <button onclick="buyUpgrade()">Buy Upgrade</button>
+        <span id="upgrade-cost">Upgrade Cost: 10</span>
+        <br>
+        <button id="ability-button" onclick="activateAbility()">Activate Ability</button>
+        <span id="ability-status">Ability: Ready!</span>
+        <p id="level-display">Level: 1</p>
+        <p id="ap-display">Ability Points: 0</p>
+        <div id="upgrade-shop" style="margin:16px 0;">
+            <h3>Permanent Upgrades</h3>
+            <button onclick="buyPermanentUpgrade('clickPower')">+1 Click Power (Cost: <span id="clickPower-cost">1</span> AP)</button>
+            <span id="clickPower-level">Level: 0</span>
+            <br>
+            <button onclick="buyPermanentUpgrade('autoPower')">+1 Auto Power (Cost: <span id="autoPower-cost">1</span> AP)</button>
+            <span id="autoPower-level">Level: 0</span>
+        </div>
+        <div id="boss-section" style="display:none;">
+            <h2>Boss Fight!</h2>
+            <img id="boss-image" src="" alt="Boss Monster" style="display:none; width:96px; image-rendering:pixelated;">
+            <p id="boss-health">Boss Health: 0 / 0</p>
+        </div>
+    </div>
+    <script src="Untitled-1.js"></script>
+</body>
+</html>
